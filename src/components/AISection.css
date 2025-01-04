@@ -1,0 +1,49 @@
+.ai-section{
+    margin: 4rem;
+}
+
+.ai-content{
+    border-radius: 2rem;
+    background-color: #fef7e0;
+
+}
+
+.ai-info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+.ai-tag{
+    padding:0 2rem;
+    padding-top: 2rem ;
+}
+
+.ai-title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.ai-text{
+    font-size: 1.3rem;
+}
+
+.ai-image{
+    width: 100%;
+}
+
+.ai-heading{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+}
+.ai-heading div{
+    padding: 1rem;
+    display: inline-block;
+    background-color: #fef7e0;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    color: #705601;
+}

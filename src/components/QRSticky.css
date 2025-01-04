@@ -1,0 +1,33 @@
+.qr-container{
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 20vh;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 0.06),
+      0px 1px 1px -0.5px rgb(0 0 0 / 0.06),
+      0px 3px 3px -1.5px rgb(0 0 0 / 0.06), 
+      0px 6px 6px -3px rgb(0 0 0 / 0.06),
+      0px 12px 12px -6px rgb(0 0 0 / 0.06),
+      0px 24px 24px -12px rgb(0 0 0 / 0.06);
+    display: flex;
+    padding: 1rem;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+.qr-content{
+    transition:all 1s;
+}
+
+.qr-content div{
+    font-size: 0.8rem;
+    text-align: center;
+}
+.qr-desktop{
+    width: 100px;
+}
+.qr-image{
+    width: 100%;
+}

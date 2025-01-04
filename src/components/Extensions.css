@@ -1,0 +1,75 @@
+.extensions-section{
+    margin-top: 8rem;
+}
+.extensions-content{
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: 4rem 0;
+    margin: 0 4rem;
+}
+
+
+.extensions-content__content1 h1{
+    font-size: 4rem;
+}
+.extensions-content__content1 button{
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+}
+.extensions-content__content2{
+    flex-grow: 1;
+}
+.extensions-image-container{
+    position: relative;
+    width: 80%;
+}
+.main-image{
+    width: 100%;
+}
+
+.extensions-icon{
+    position: absolute;
+    width: 150px;
+    /* top: 0;
+    right: 20%; */
+    top: -100px;
+    right: 10%;
+}
+
+.extensions-paint{
+    position: absolute;
+    width: 80px;
+    /* bottom: 10%;
+    right: 25%; */
+    right: -10%;
+    bottom: -5%;
+}
+.extensions-person{
+    position: absolute;
+    width: 100px;
+    /* left: 20%;
+    bottom: 0; */
+    bottom: -15%;
+    left: -10%;
+}
+
+.extensions-shop{
+    position: absolute;
+    width: 90px;
+    /* left: 5%;
+    top: 30%; */
+    left: -10%;
+    top: 20%;
+}
+.extensions-video{
+    position: absolute;
+    width: 80px;
+    /* top: 40%;
+    right: 5%; */
+    right: -20%;
+    top: 40%;
+}

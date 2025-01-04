@@ -1,0 +1,67 @@
+.banner-section{
+    margin : 0 4rem;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.banner-content{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.banner-content .title{
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 4rem;
+    text-align: center;
+}
+
+.banner-content .text{
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.banner-content button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #1a73e8;
+    gap: 0.5rem;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: none;
+    margin-bottom: 4rem;
+}
+
+.banner-qr{
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 120px;
+    background-color: rgb(243, 249, 248);
+}
+
+.banner-image{
+    width: 100%;
+}
+
+.banner-qr div{
+    color: black;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}

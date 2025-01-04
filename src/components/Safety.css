@@ -1,0 +1,14 @@
+.heading{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0;
+}
+.heading-highlight{
+    padding: 1rem 2rem;
+    background-color: #e8f0fe;
+    color: #1967d2;
+    border-radius: 2rem;
+    margin-left: 1rem;
+    display: inline-block;
+}

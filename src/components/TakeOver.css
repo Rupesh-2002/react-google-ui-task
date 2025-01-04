@@ -1,0 +1,46 @@
+
+
+.theme-image{
+    width: 100%;
+    z-index : 10;
+    border-radius: 2rem;
+}
+
+.take-over-heading{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+}
+.take-over-heading div{
+    padding: 1rem;
+    display: inline-block;
+    background-color: #fce8e6;
+    border-radius: 2rem;
+    margin: 0 1rem;
+    color: #ea4335;
+}
+.take-over-animation__1{
+    margin: auto;
+    position: relative;
+    width: 60%;
+    /* overflow: hidden; */
+}
+
+.take-over-animation__2{
+    width: 60%;
+    margin: 0 auto;
+    /* position: absolute; */
+    overflow: hidden;
+}
+ .theme-ui-image2{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index : 1
+}
+/* .theme-ui-image2{
+    top: 100%;
+} */

@@ -1,0 +1,98 @@
+.card-content{
+    min-height: 620px;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-content:hover .card-plus-icon{
+    transform: scale(1.1);
+}
+
+.card-header{
+    padding: 3rem 4rem;
+}
+
+.card-text{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card-title{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.card-back-image{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.card-plus-icon{
+    position: absolute;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: skyblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1rem;
+    right: 1rem;
+    border: none;
+    color: white;
+    transition: 300ms;
+}
+
+.card-content:hover .password-image{
+    transform: scale(1.1);
+}
+.password-image{
+    width: 100%;
+    transition: 300ms;
+}
+
+.password-content{
+    background-color: #1a73e8;
+    color: white;
+    height: 720px;
+}
+.password-plus-icon{
+    background-color: white;
+    color: #1a73e8;
+}
+
+
+
+.safety-check-content{
+    background-color: #e8f0fe;
+}
+
+.safety-check-plus-icon{
+    background-color: #1a73e8;
+    color: white;
+}
+
+
+.safe-browsing-content{
+    border: 1px solid rgb(63, 63, 207);
+}
+.safe-browsing-plus-icon{
+    background-color: #1a73e8;
+    color: white;
+}
+
+.privacy-guide-content{
+    background-color: #174ea6;
+    height: 720px;
+    color: white;
+}
+
+.privacy-guide-image{
+    width: 100%;
+    transition: 300ms;
+}
+.card-content:hover .privacy-guide-image{
+    transform: scale(1.1);
+}
