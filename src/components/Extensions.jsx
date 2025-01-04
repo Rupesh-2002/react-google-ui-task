@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import extensionsImg from "../assets/extensions/extensions-img.png";
 import extensionsIcon from "../assets/extensions/extensions-icon.png";
 import extensionsPaint from "../assets/extensions/extensions-paint.png";
-import extensionsPerson from "../assets/extensions/extensions-Person.png";
+import extensionsPerson from "../assets/extensions/extensions-person.png";
 import extensionsShop from "../assets/extensions/extensions-shop.png";
 import extensionsVideo from "../assets/extensions/extensions-video.png";
 import "./Extensions.css";
