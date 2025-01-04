@@ -15,6 +15,7 @@
     padding: 1rem;
     padding-right: 0;
     cursor: pointer;
+    z-index : 100;
 }
 
 .qr-content{
