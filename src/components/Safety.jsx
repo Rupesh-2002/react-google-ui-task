@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import PasswordCard from "./SafetyCards/PasswordCard.jsx";
-import SafetyCheckCard from "./SafetyCards/safetyCheckCard.jsx";
+import SafetyCheckCard from "./SafetyCards/SafetyCheckCard.jsx";
 import SafeBrowsingCard from "./SafetyCards/SafeBrowsingCard.jsx";
 import PrivacyGuideCard from "./SafetyCards/PrivacyGuideCard.jsx";
 import './Safety.css';
