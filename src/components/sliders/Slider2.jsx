@@ -3,9 +3,9 @@ import slideImage1 from "../../assets/sliders/slider-1.webp";
 import './Sliders.css'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const Slider2 = () => {
-    gsap.registerPlugin(ScrollTrigger);
+
     useGSAP(()=>{
         const tl = gsap.timeline({
             scrollTrigger : {

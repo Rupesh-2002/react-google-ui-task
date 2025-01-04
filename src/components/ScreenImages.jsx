@@ -7,7 +7,7 @@ import img5 from '../assets/screenImages/img5.webp'
 import './ScreenImages.css'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const imgClassNames = ['img1', 'img2', 'img3', 'img4', 'img5']
 const imgAnimations = [
   {
@@ -29,7 +29,7 @@ const imgAnimations = [
 const ScreenImages = () => {
   const imgContainerRef = useRef(null)
   const imageRefs = useRef([])
-  gsap.registerPlugin(ScrollTrigger)
+
 
   useGSAP(()=>{
     const tl = gsap.timeline({
@@ -66,6 +66,7 @@ const ScreenImages = () => {
             [img1, img2, img3, img4, img5].map((img, index)=>{
                  return <img 
                     src={img}
+                    key={img}
                     ref = {(el)=>imageRefs.current[index] = el}
                     alt=""
                     className={imgClassNames[index]}

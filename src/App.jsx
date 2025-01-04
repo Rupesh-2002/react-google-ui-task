@@ -10,9 +10,24 @@ import ScreenImages from './components/ScreenImages.jsx';
 import Slider from './components/Slider.jsx';
 import TakeOver from './components/TakeOver.jsx';
 import Updates from './components/Updates.jsx';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import Lenis from 'lenis';
 import './index.css'
+import { useEffect } from 'react';
 function App() {
+  useEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger)
+  },[])
 
+  useEffect(()=>{
+    const lenis = new Lenis();
+    function raf(time){
+      lenis.raf(time)
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  },[])
   return (
     <>
      <Header />

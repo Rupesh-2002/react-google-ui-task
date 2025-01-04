@@ -4,11 +4,10 @@ import updatesImage from "../assets/updates/updates-image.png";
 import logo from "../assets/chromeLogo.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const Updates = () => {
   const lettersRef = useRef([]);
   const imgContainerRef = useRef(null);
-  gsap.registerPlugin(ScrollTrigger)
   
   useGSAP(() => {
     const tl = gsap.timeline({

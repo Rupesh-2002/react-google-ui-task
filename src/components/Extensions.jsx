@@ -8,7 +8,7 @@ import extensionsVideo from "../assets/extensions/extensions-video.png";
 import "./Extensions.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const afterAnimationCss = [
   {
     top: 0,
@@ -56,7 +56,6 @@ const beforeAnimationCss = [
 const Extensions = () => {
   const imgRefs = useRef([]);
   const imgContainerRef = useRef(null);
-  gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
     const tl = gsap.timeline({

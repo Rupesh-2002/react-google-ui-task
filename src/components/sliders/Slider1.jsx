@@ -4,9 +4,8 @@ import video from '../../assets/sliders/video.webm'
 import './Sliders.css'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 const Slider1 = () => {
-    gsap.registerPlugin(ScrollTrigger);
     useGSAP(()=>{
         const tl = gsap.timeline({
             scrollTrigger : {

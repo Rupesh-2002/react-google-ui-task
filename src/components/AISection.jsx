@@ -3,10 +3,10 @@ import './AISection.css'
 import aiImage from '../assets/ai/ai.webp'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const AISection = () => {
     const lettersRef = useRef([]);
-  gsap.registerPlugin(ScrollTrigger)
+
   
   useGSAP(() => {
     const tl = gsap.timeline({

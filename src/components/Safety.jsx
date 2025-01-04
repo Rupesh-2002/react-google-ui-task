@@ -6,7 +6,7 @@ import PrivacyGuideCard from "./SafetyCards/PrivacyGuideCard.jsx";
 import './Safety.css';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const style = {
   display: "grid",
   gridTemplateColumns: "1fr 1fr",
@@ -20,7 +20,7 @@ const style1 = {
 };
 const Safety = () => {
   const lettersRef = useRef([])
-  gsap.registerPlugin(ScrollTrigger)
+
   useGSAP(() => {
     const tl = gsap.timeline({
         scrollTrigger: {

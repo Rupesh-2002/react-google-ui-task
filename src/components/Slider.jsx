@@ -2,13 +2,13 @@ import React, {useRef} from "react";
 import './Slider.css'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Slider1 from "./sliders/Slider1";
 import Slider2 from "./sliders/Slider2";
 import Slider3 from "./sliders/Slider3";
 const Slider = () => {
   const lettersRef = useRef([]);
-  gsap.registerPlugin(ScrollTrigger)
+
   
   useGSAP(() => {
     const tl = gsap.timeline({
