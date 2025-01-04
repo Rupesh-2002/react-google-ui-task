@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Features.css";
-import SearchCard from "./featuresCards/SearchCard";
-import WorkspaceCard from "./featuresCards/WorkspaceCard";
+import SearchCard from "./featuresCards/SearchCard.jsx";
+import WorkspaceCard from "./featuresCards/WorkspaceCard.jsx";
 
 const Features = () => {
   return (

@@ -1,6 +1,5 @@
 import AISection from './components/AISection.jsx';
 import Banner from './components/Banner.jsx';
-import Demo from './components/Demo.jsx';
 import Extensions from './components/Extensions.jsx';
 import Features from './components/Features.jsx';
 import Header from './components/Header.jsx';

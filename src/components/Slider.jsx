@@ -1,7 +1,6 @@
 import React, {useRef} from "react";
 import './Slider.css'
 import gsap from "gsap";
-import "./Demo.css";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Slider1 from "./sliders/Slider1";

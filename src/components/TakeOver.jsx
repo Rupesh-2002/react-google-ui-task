@@ -4,7 +4,6 @@ import img1 from "../assets/takeover/theme.webp";
 import themeUIImage1 from "../assets/takeover/theme-ui.webp";
 import themeUIImage2 from "../assets/takeover/theme-ui-2.webp";
 import gsap from "gsap";
-import "./Demo.css";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const TakeOver = () => {
