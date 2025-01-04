@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import PasswordCard from "./SafetyCards.jsx/PasswordCard.jsx";
-import SafetyCheckCard from "./SafetyCards.jsx/safetyCheckCard.jsx";
-import SafeBrowsingCard from "./SafetyCards.jsx/SafeBrowsingCard.jsx";
-import PrivacyGuideCard from "./SafetyCards.jsx/PrivacyGuideCard.jsx";
+import PasswordCard from "./SafetyCards/PasswordCard.jsx";
+import SafetyCheckCard from "./SafetyCards/safetyCheckCard.jsx";
+import SafeBrowsingCard from "./SafetyCards/SafeBrowsingCard.jsx";
+import PrivacyGuideCard from "./SafetyCards/PrivacyGuideCard.jsx";
 import './Safety.css';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
