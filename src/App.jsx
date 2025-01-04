@@ -16,9 +16,7 @@ import Lenis from 'lenis';
 import './index.css'
 import { useEffect } from 'react';
 function App() {
-  useEffect(()=>{
-    gsap.registerPlugin(ScrollTrigger)
-  },[])
+  gsap.registerPlugin(ScrollTrigger)
 
   useEffect(()=>{
     const lenis = new Lenis();
