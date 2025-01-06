@@ -11,15 +11,11 @@ const SearchCard = () => {
   const mainContentRef = useRef(null);
   const searchImageRef = useRef(null);
   const extraContentRef = useRef(null);
-  // const [rotate, setRotate] = useState(false)
-  const iconRef = useRef(null)
+
   const { contextSafe } = useGSAP();
 
-
   const toggleContent = contextSafe(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setShowExtraContent((prev) => !prev),
-    });
+    const tl = gsap.timeline();
 
     if (showExtraContent) {
       tl.fromTo(
@@ -42,22 +38,19 @@ const SearchCard = () => {
         .fromTo(
           mainContentRef.current,
           {
-            opacity : 0,
-            y : -20
+            opacity: 0,
+            y: -20,
           },
           {
             opacity: 1,
             y: 0,
             duration: 0.5,
-          },
+          }
         )
-        .to(
-          searchImageRef.current,
-          {
-            opacity: 1,
-            duration: 0.5,
-          },
-        );
+        .to(searchImageRef.current, {
+          opacity: 1,
+          duration: 0.5,
+        });
     } else {
       // Transition to extra content
       tl.fromTo(
@@ -100,21 +93,13 @@ const SearchCard = () => {
         );
     }
   });
-  // const toggleIcon = (e)=>{
-  //   if(!rotate){
-  //      iconRef.current.style.transform = 'rotate(225deg)'
-  //   }
-  //   else{
-  //   .style.transform = 'rotate(-225deg)'
-  //   }
-  //   setRotate(!rotate)
-  // }
-  const handleClick = ()=>{
-    toggleContent()
-    // toggleIcon()
-  }
+ 
+  const handleCardClick = () => {
+    toggleContent();
+    setShowExtraContent(prev=>!prev)
+  };
   return (
-    <div onClick={handleClick} className="features-content__content1">
+    <div onClick={handleCardClick} className="features-content__content1">
       <div
         ref={extraContentRef}
         className="features-header"
@@ -127,21 +112,23 @@ const SearchCard = () => {
           inside your browser’s address bar.
         </div>
       </div>
-        <div ref={mainContentRef} className="features-header">
-          <div className="features-tag">GOOGLE SEARCH</div>
-          <div className="features-title">
-            The search bar you love, built right in.
-          </div>
+      <div ref={mainContentRef} className="features-header">
+        <div className="features-tag">GOOGLE SEARCH</div>
+        <div className="features-title">
+          The search bar you love, built right in.
         </div>
-        <img
-          ref={searchImageRef}
-          className="search-image"
-          src={searchImage}
-          alt=""
-        />
+      </div>
+      <img
+        ref={searchImageRef}
+        className="search-image"
+        src={searchImage}
+        alt=""
+      />
 
-      <button ref={iconRef} className="plus-icon">
-        <FaPlus />
+      <button className={`
+        plus-icon ${showExtraContent ? 'rotate' : ''}
+        `}>
+        <FaPlus size={20} />
       </button>
     </div>
   );

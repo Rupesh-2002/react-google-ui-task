@@ -42,12 +42,12 @@
     right: 1rem;
     border: none;
     color: white;
-    transition: 300ms;
+    transition: 500ms;
+}
+.card-plus-icon.rotate{
+    transform: rotate(45deg) scale(1.1) !important;
 }
 
-.card-content:hover .password-image{
-    transform: scale(1.1);
-}
 .password-image{
     width: 100%;
     transition: 300ms;
@@ -92,7 +92,4 @@
 .privacy-guide-image{
     width: 100%;
     transition: 300ms;
-}
-.card-content:hover .privacy-guide-image{
-    transform: scale(1.1);
 }

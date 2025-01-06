@@ -13,9 +13,7 @@ const SafetyCheckCard = () => {
   const { contextSafe } = useGSAP();
 
   const toggleContent = contextSafe(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setShowExtraContent((prev) => !prev),
-    });
+    const tl = gsap.timeline();
 
     if (showExtraContent) {
         // Transition to main content
@@ -80,8 +78,13 @@ const SafetyCheckCard = () => {
         );
     }
   });
+  
+  const handleCardClick = ()=>{
+    setShowExtraContent((prev) => !prev)
+    toggleContent()
+  }
   return (
-    <div onClick={toggleContent} className="card-content safety-check-content">
+    <div onClick={handleCardClick} className="card-content safety-check-content">
       <div
         ref={extraContentRef}
         className="card-header"
@@ -99,8 +102,11 @@ const SafetyCheckCard = () => {
         <div className="card-title">Check your safety level in real time with just one click.</div>
       </div>
 
-      <button className="card-plus-icon safety-check-plus-icon">
-        <FaPlus />
+      <button
+       className={`card-plus-icon safety-check-plus-icon ${showExtraContent ? 'rotate' : ''}
+        `}
+       >
+        <FaPlus size={20}/>
       </button>
     </div>
   );

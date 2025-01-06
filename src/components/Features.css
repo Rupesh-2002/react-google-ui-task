@@ -31,10 +31,7 @@
     height: 800px;
     cursor: pointer;
 }
-.features-content__content2:hover .docs-image{
-    transform: scale(1.1);
-}
-.features-content__content2:hover .plus-icon{
+.features-content__content2:hover .docs-image, .features-content__content2:hover button{
     transform: scale(1.1);
 }
 .features-header{
@@ -78,6 +75,10 @@
     right: 1rem;
     border: none;
     color: white;
-    transition: 300ms;
+    transition: 500ms;
+}
+
+.rotate{
+    transform: rotate(45deg) scale(1.1) !important;
 }
 

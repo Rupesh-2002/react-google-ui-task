@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 const TakeOver = () => {
 
   const lettersRef = useRef([]);
-
   
   useGSAP(() => {
     const tl = gsap.timeline({
@@ -51,6 +50,7 @@ const TakeOver = () => {
       {
         scale: 0.2,
         y: 100,
+        duration : 1
       },
       0
     );
@@ -59,6 +59,7 @@ const TakeOver = () => {
       {
         scaleX: 1.3,
         scaleY: 1.3,
+        duration : 1
       },
       0
     );

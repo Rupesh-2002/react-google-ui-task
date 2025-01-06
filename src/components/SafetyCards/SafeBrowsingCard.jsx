@@ -13,9 +13,7 @@ const SafeBrowsingCard = () => {
   const { contextSafe } = useGSAP();
 
   const toggleContent = contextSafe(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setShowExtraContent((prev) => !prev),
-    });
+    const tl = gsap.timeline();
 
     if (showExtraContent) {
         // Transition to main content
@@ -80,8 +78,14 @@ const SafeBrowsingCard = () => {
         );
     }
   });
+  const handleCardClick = ()=>{
+    
+    setShowExtraContent((prev) => !prev)
+    toggleContent();
+  
+  }
   return (
-    <div onClick={toggleContent} className="card-content safe-browsing-content">
+    <div onClick={handleCardClick} className="card-content safe-browsing-content">
       <div
         ref={extraContentRef}
         className="card-header"
@@ -97,8 +101,10 @@ const SafeBrowsingCard = () => {
         <div className="card-title">Browse with the confidence that you're staying safer online.</div>
       </div>
 
-      <button className="card-plus-icon safe-browsing-plus-icon">
-        <FaPlus />
+      <button className={`card-plus-icon safe-browsing-plus-icon
+      ${showExtraContent ? 'rotate': ''}
+      `}>
+        <FaPlus size={20}/>
       </button>
     </div>
   );

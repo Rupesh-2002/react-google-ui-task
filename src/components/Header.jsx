@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <div className='logo'>
-        <a href="/intl/en_in/chrome/">
+        <a href="/">
            <img src={chromeLogo} alt="chrome logo" />
         <span>
           Chrome
@@ -16,20 +16,20 @@ const Header = () => {
       <nav>
        <ul>
         <li>
-            <a href="">
+            <a href="/">
                 Home
             </a>
         </li>
         <li>
-            <a href="/intl/en_in/chrome/">The Browser By Google</a>
+            <a href="https://www.google.com/intl/en_in/chrome/browser-tools/">The Browser By Google</a>
         </li>
         <li>
-            <a href="">
+            <a href="https://www.google.com/intl/en_in/chrome/safety/">
                 Safety
             </a>
         </li>
         <li>
-            <a href="">Support</a>
+            <a href="https://www.google.com/intl/en_in/chrome/safety/">Support</a>
         </li>
        </ul>
       </nav>

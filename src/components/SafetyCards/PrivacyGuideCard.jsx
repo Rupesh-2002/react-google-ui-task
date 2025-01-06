@@ -15,9 +15,7 @@ const PrivacyGuideCard = () => {
   const { contextSafe } = useGSAP();
 
   const toggleContent = contextSafe(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setShowExtraContent((prev) => !prev),
-    });
+    const tl = gsap.timeline();
 
     if (showExtraContent) {
       tl.fromTo(
@@ -95,8 +93,13 @@ const PrivacyGuideCard = () => {
         );
     }
   });
+
+  const handleCardClick = ()=>{
+    toggleContent();
+    setShowExtraContent(prev => !prev)
+  }
   return (
-    <div onClick={toggleContent} className="card-content privacy-guide-content">
+    <div onClick={handleCardClick} className="card-content privacy-guide-content">
       <div
         ref={extraContentRef}
         className="card-header"
@@ -120,8 +123,10 @@ const PrivacyGuideCard = () => {
         alt=""
       />
 
-      <button className="card-plus-icon password-plus-icon">
-        <FaPlus />
+      <button className={`card-plus-icon password-plus-icon
+        ${showExtraContent ? 'rotate' : ''}
+        `}>
+        <FaPlus size={20}/>
       </button>
     </div>
   );

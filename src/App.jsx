@@ -15,6 +15,7 @@ import { ScrollTrigger } from 'gsap/all';
 import Lenis from 'lenis';
 import './index.css'
 import { useEffect } from 'react';
+import FAQ from './components/FAQ.jsx';
 function App() {
   gsap.registerPlugin(ScrollTrigger)
 
@@ -38,6 +39,7 @@ function App() {
      <Slider />
      <AISection />
      <Features />
+     <FAQ />
      <Banner />
      <QRSticky />
     </>

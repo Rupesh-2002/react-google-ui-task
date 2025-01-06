@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useReducer, useRef, useState } from "react";
 import "./safetyCards.css";
 import passwordImage from "../../assets/safety/passwords-field.webp";
 import passwordBackImage from "../../assets/safety/password-back.webp";
@@ -14,10 +14,9 @@ const PasswordCard = () => {
 
   const { contextSafe } = useGSAP();
 
+
   const toggleContent = contextSafe(() => {
-    const tl = gsap.timeline({
-      onComplete: () => setShowExtraContent((prev) => !prev),
-    });
+    const tl = gsap.timeline();
 
     if (showExtraContent) {
       tl.fromTo(
@@ -95,8 +94,14 @@ const PasswordCard = () => {
         );
     }
   });
+  
+ 
+  const handleCardClick = ()=>{
+    toggleContent();
+    setShowExtraContent(prev => !prev)
+  }
   return (
-    <div onClick={toggleContent} className="card-content password-content">
+    <div onClick={handleCardClick} className="card-content password-content">
       <div
         ref={extraContentRef}
         className="card-header"
@@ -120,8 +125,10 @@ const PasswordCard = () => {
         alt=""
       />
 
-      <button className="card-plus-icon password-plus-icon">
-        <FaPlus />
+      <button className={`card-plus-icon password-plus-icon
+        ${showExtraContent ? 'rotate' : ''}
+        `} >
+        <FaPlus size={20}/>
       </button>
     </div>
   );
