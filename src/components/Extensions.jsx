@@ -58,7 +58,7 @@ const Extensions = () => {
   const imgContainerRef = useRef(null);
 
   useGSAP(() => {
-    const tl = gsap.timeline({
+    const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: imgContainerRef.current,
         scrub: true,
@@ -69,14 +69,14 @@ const Extensions = () => {
     });
 
     imgRefs.current.forEach((el, index) => {
-      tl.from(
+      tl1.from(
         el,
         {
           opacity: 0,
         },
         0
       );
-      tl.to(
+      tl1.to(
         el,
         {
           ...afterAnimationCss[index],
@@ -86,26 +86,26 @@ const Extensions = () => {
       );
     });
 
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: imgContainerRef.current, 
+        scrub: true,
+        start: "top 0%", 
+        end: "top -50%",
+        // markers : true 
+      }
+    })
+  
     imgRefs.current.forEach((el, index) => {
-      gsap.from(el, {
-        ...afterAnimationCss[index],
-        opacity: 1,
-      });
-      gsap.to(
-        el,
-        {
-          ...beforeAnimationCss[index], 
-          opacity: 0, 
-          scrollTrigger: {
-            trigger: imgContainerRef.current, 
-            scrub: true,
-            start: "top 0%", 
-            end: "top -50%", 
+        tl2.to(
+          el,
+          {
+            ...beforeAnimationCss[index], 
+            opacity: 0, 
           },
-        },
-        0
-      );
-    });
+          0
+        );
+      });
   });
     
   return (
