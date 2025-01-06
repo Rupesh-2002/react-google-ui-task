@@ -36,7 +36,7 @@ const PasswordCard = () => {
           },
         }
       )
-        .fromTo(
+       .fromTo(
           mainContentRef.current,
           {
             opacity: 0,
@@ -48,10 +48,15 @@ const PasswordCard = () => {
             duration: 0.5,
           }
         )
-        .to(passwordImageRef.current, {
+        .fromTo(passwordImageRef.current,
+          {
+             opacity : 0
+          },  
+          {
           opacity: 1,
           duration: 0.5,
-        });
+        }, "<"
+      );
     } else {
       // Transition to extra content
       tl.fromTo(
@@ -65,7 +70,7 @@ const PasswordCard = () => {
           y: -20,
           duration: 0.5,
         },
-        "<"
+        0
       )
         .to(
           passwordImageRef.current,
@@ -78,7 +83,7 @@ const PasswordCard = () => {
               extraContentRef.current.style.display = "block"; // Show extra content
             },
           },
-          "<"
+          0
         )
         .fromTo(
           extraContentRef.current,
@@ -89,8 +94,9 @@ const PasswordCard = () => {
           {
             opacity: 1,
             y: 0,
-            duration: 0.5,
+            duration: 1,
           }
+          ,">"
         );
     }
   });

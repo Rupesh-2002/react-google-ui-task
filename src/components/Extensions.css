@@ -20,6 +20,9 @@
     background-color: #1a73e8;
     color: white;
 }
+.extensions-content__content1 p{
+    font-size: 1.2rem;
+}
 .extensions-content__content2{
     flex-grow: 1;
 }

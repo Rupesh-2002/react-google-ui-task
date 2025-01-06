@@ -2,21 +2,20 @@
     margin: 6rem 0;
 }
 .slider-container{
-    gap: 2rem;
+    gap: 5vw;
     padding-top: 10rem;
-    padding-left: 15rem;
+    padding-left: 15vw;
     padding-right: 3rem;
     position: relative;
     display: flex;
-    overflow-x: scroll;
-    overflow-y: visible;
+    transition: 1s;
 }
 
 .slider-container::-webkit-scrollbar{
     display: none;
 }
 
-.slider-heading{
+.heading{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -24,11 +23,34 @@
     margin-bottom: 2rem;
 }
 
-.slider-heading div{
+ .slider-word{
     padding: 0.5rem 1rem;
     display: inline-block;
     background-color: rgb(193, 235, 193);
     border-radius: 2rem;
     margin:0 1rem;
     color: green;
+}
+.letter{
+    transform: translateY(2rem);
+    transition: 0.5s;
+}
+
+.slider-controls{
+    padding-left: 15vw;
+    padding-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-controls-icon{
+    border-radius: 50%;
+    padding: 0.5rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    background-color: #afd6ea;
 }

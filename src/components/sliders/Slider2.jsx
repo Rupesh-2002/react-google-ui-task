@@ -5,24 +5,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Slider2 = () => {
-
-    useGSAP(()=>{
-        const tl = gsap.timeline({
-            scrollTrigger : {
-                trigger : '.slide-2',
-                start : 'top 40%',
-                end : 'top 30%',
-                scrub : true,
-                // markers : true
-            }
-        })
-
-        tl.to('.slide-2', {
-            x : 0,
-            y : 0
-        },0)
-
-    })
   return (
     <div className="slide-2 slide">
       <div className="slide-content">

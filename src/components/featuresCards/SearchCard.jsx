@@ -50,7 +50,7 @@ const SearchCard = () => {
         .to(searchImageRef.current, {
           opacity: 1,
           duration: 0.5,
-        });
+        },"<");
     } else {
       // Transition to extra content
       tl.fromTo(
@@ -63,8 +63,7 @@ const SearchCard = () => {
           opacity: 0,
           y: -20,
           duration: 0.5,
-        },
-        "<"
+        }
       )
         .to(
           searchImageRef.current,
@@ -89,7 +88,7 @@ const SearchCard = () => {
             opacity: 1,
             y: 0,
             duration: 0.5,
-          }
+          }, ">"
         );
     }
   });

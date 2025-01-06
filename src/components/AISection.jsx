@@ -5,48 +5,49 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const AISection = () => {
-    const lettersRef = useRef([]);
+    const wordRef = useRef(null);
 
   
   useGSAP(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: lettersRef.current[0],
+          trigger: wordRef.current,
           start: "middle 100%",
         },
       })
+      
+      tl.fromTo(
+        '.letter',
+        {
+          y: 40,
+          opacity : 0
+        },
+        {
+          y: 0,
+          stagger:0.05,
+          opacity : 1,
+          delay: 0.2,
+          duration: 0.2,
+        }
+      );
     
-    tl.from(lettersRef.current, {
-        y:(index)=> 5 + index, 
-        opacity: 0,
-        stagger: (index) => 0.05 + index * 0.1, 
-        duration: 0.5, 
-        ease: "power4.out", 
-        delay: 0.5, 
-      })
-      tl.to(lettersRef.current, {
-      y: 0,
-      opacity: 1,
-      ease: "elastic.out(1, 0.75)",
-      duration: 1,
-    });
-  });
+  },{scope : wordRef});
 
   return (
     <div className="ai-section">
-      <div className="ai-heading">
+      <div className="heading">
         
         The browser
-        <div>
+        <div ref={wordRef} className="ai-word">
           {['b', 'u', 'i', 'l', 't'].map((letter, index) => (
-            <span
+            <div
               key={index}
               style={{display : 'inline-block'
               }}
-              ref={(el) => (lettersRef.current[index] = el)}
+              className="letter"
             >
               {letter}
-            </span>
+            </div>
           ))}
         </div>
         <br />

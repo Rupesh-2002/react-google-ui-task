@@ -50,7 +50,7 @@ const PrivacyGuideCard = () => {
         .to(privacyGuideImageRef.current, {
           opacity: 1,
           duration: 0.5,
-        });
+        }, "<");
     } else {
       // Transition to extra content
       tl.fromTo(
@@ -64,7 +64,7 @@ const PrivacyGuideCard = () => {
           y: -20,
           duration: 0.5,
         },
-        "<"
+        0
       )
         .to(
           privacyGuideImageRef.current,
@@ -77,7 +77,7 @@ const PrivacyGuideCard = () => {
               extraContentRef.current.style.display = "block"; // Show extra content
             },
           },
-          "<"
+          0
         )
         .fromTo(
           extraContentRef.current,

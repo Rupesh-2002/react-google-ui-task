@@ -14,19 +14,20 @@
 }
 .slide{
     flex-shrink: 0;
-    width: 720px;
-    height: 420px;
+    width: 60vw;
+    min-height: 420px;
     border-radius: 2rem;
     position: relative;
     overflow: hidden;
 }
 .slide-1{
-    transform: scale(1.2) translateY(-20%);
+    /* transform: scale(1.2) translateY(-20%); */
     border: 1px solid gray;
     display: inline-block;
+    margin-left: 5vw;
 }
 .slide-2{
-    transform: translateX(50%);
+    /* transform: translateX(50%); */
     background-color: #fde293;
 }
 .slide-image{

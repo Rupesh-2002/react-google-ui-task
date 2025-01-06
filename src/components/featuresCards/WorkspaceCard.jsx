@@ -47,7 +47,7 @@ const WorkspaceCard = () => {
         .to(docsImageRef.current, {
           opacity: 1,
           duration: 0.5,
-        });
+        }, "<");
     } else {
       // Transition to extra content
       tl.fromTo(
@@ -61,7 +61,7 @@ const WorkspaceCard = () => {
           y: -20,
           duration: 0.5,
         },
-        "<"
+        0
       )
         .to(
           docsImageRef.current,
