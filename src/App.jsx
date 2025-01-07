@@ -16,6 +16,7 @@ import Lenis from 'lenis';
 import './index.css'
 import { useEffect } from 'react';
 import FAQ from './components/FAQ.jsx';
+import Accordion from './components/Accordion.jsx';
 function App() {
   gsap.registerPlugin(ScrollTrigger)
 
@@ -34,6 +35,7 @@ function App() {
      <ScreenImages />
      <Updates />
      <TakeOver />
+     <Accordion />
      <Extensions />
      <Safety />
      <Slider />

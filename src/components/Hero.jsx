@@ -49,7 +49,7 @@ const Hero = () => {
           </div>
           <p>For Windows 11/10 64-bit</p>
           <div className="hero-info__checkbox">
-            <input type="checkbox" name="" id="checkbox" />
+            <input type="checkbox" name="" id="checkbox" checked={true}/>
             <label htmlFor="checkbox">
               Help make Google Chrome better by automatically sending usage
               statistics and crash reports to Google.

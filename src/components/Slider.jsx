@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import "./Slider.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import { MdOutlineSpeed } from "react-icons/md";
 import Slider1 from "./sliders/Slider1";
 import Slider2 from "./sliders/Slider2";
 import Slider3 from "./sliders/Slider3";
@@ -58,6 +58,9 @@ const Slider = () => {
       <div className="heading">
         The
         <div ref={wordRef} className="slider-word">
+          <div className="slider-icon">
+             <MdOutlineSpeed />
+          </div>
           {["f", "a", "s", "t"].map((letter, index) => (
             <div
               key={index}

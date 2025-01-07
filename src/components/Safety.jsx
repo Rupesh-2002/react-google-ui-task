@@ -3,7 +3,8 @@ import PasswordCard from "./SafetyCards/PasswordCard.jsx";
 import SafetyCheckCard from "./SafetyCards/SafetyCheckCard.jsx";
 import SafeBrowsingCard from "./SafetyCards/SafeBrowsingCard.jsx";
 import PrivacyGuideCard from "./SafetyCards/PrivacyGuideCard.jsx";
-import './Safety.css';
+import { AiOutlineSafetyCertificate } from "react-icons/ai";
+import "./Safety.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -19,49 +20,55 @@ const style1 = {
   gap: "3rem",
 };
 const Safety = () => {
-  const wordRef = useRef(null)
+  const wordRef = useRef(null);
 
-  useGSAP(() => {
-    const tl = gsap.timeline({
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: wordRef.current,
           start: "middle 100%",
           // markers : true
         },
-      })
-    
+      });
+
       tl.fromTo(
-        '.letter',
+        ".letter",
         {
           y: 40,
-          opacity : 0
+          opacity: 0,
         },
         {
           y: 0,
           stagger: 0.05,
-          opacity : 1,
+          opacity: 1,
           delay: 0.2,
           duration: 0.2,
         }
       );
-  }, {scope : wordRef});
+    },
+    { scope: wordRef }
+  );
 
   return (
     <section style={{ margin: "0 4rem" }}>
       <div className="heading">
         Stay
         <div ref={wordRef} className="safety-word">
-          {['s', 'a', 'f', 'e'].map((letter, index) => (
+          <div className="safety-icon">
+            <AiOutlineSafetyCertificate />
+          </div>
+          {["s", "a", "f", "e"].map((letter, index) => (
             <div
               key={index}
-              style={{display : 'inline-block'
-              }}
+              style={{ display: "inline-block" }}
               className="letter"
             >
               {letter}
             </div>
           ))}
-        </div> <br />
+        </div>{" "}
+        <br />
         while you browse
       </div>
       <div style={style}>

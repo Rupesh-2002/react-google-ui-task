@@ -5,6 +5,7 @@ import themeUIImage1 from "../assets/takeover/theme-ui.webp";
 import themeUIImage2 from "../assets/takeover/theme-ui-2.webp";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { FaPaintRoller } from "react-icons/fa6";
 
 const TakeOver = () => {
   const wordRef = useRef(null);
@@ -66,9 +67,13 @@ const TakeOver = () => {
   return (
     <>
       <div className="take-over-section">
-        <div className="heading">
+        <div className="take-over-heading">
           Make it
           <div className="take-over-word" ref={wordRef}>
+            <div className="take-over-icon">
+
+            <FaPaintRoller size={40} />
+            </div>
             {["y", "o", "u", "r", "s"].map((letter, index) => (
               <div
                 key={index}

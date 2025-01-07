@@ -16,6 +16,13 @@
     border-radius: 2rem;
     margin-right: 1rem;
     color: #1967d2;
+    position: relative;
+}
+
+.updates-icon{
+    display: inline-block;
+    padding-right: 0.5rem;
+    vertical-align: middle;
 }
 .updates-content{
     display: grid;

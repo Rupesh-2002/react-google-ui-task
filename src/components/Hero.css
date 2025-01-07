@@ -49,7 +49,11 @@
 }
 
 .hero-info__checkbox{
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    align-items: flex-start;
 }
 .hero__info p{
     text-align: center;

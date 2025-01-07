@@ -3,6 +3,7 @@ import './AISection.css'
 import aiImage from '../assets/ai/ai.webp'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { VscTools } from "react-icons/vsc";
 
 const AISection = () => {
     const wordRef = useRef(null);
@@ -39,6 +40,9 @@ const AISection = () => {
         
         The browser
         <div ref={wordRef} className="ai-word">
+          <div className="ai-icon">
+            <VscTools />
+          </div>
           {['b', 'u', 'i', 'l', 't'].map((letter, index) => (
             <div
               key={index}

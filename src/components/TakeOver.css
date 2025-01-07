@@ -5,6 +5,13 @@
     z-index : 10;
     border-radius: 2rem;
 }
+.take-over-heading{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 2rem;
+}
 
 .take-over-word{
     padding: 1rem;
@@ -13,6 +20,11 @@
     border-radius: 2rem;
     margin: 0 1rem;
     color: #ea4335;
+}
+
+.take-over-icon{
+    padding: 0 0.5rem;
+    display: inline-block;
 }
 .take-over-animation__1{
     margin: auto;

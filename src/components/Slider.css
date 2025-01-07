@@ -31,6 +31,12 @@
     margin:0 1rem;
     color: green;
 }
+
+.slider-icon{
+    display: inline-block;
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
 .letter{
     transform: translateY(2rem);
     transition: 0.5s;

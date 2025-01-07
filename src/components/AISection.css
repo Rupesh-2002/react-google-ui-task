@@ -47,3 +47,9 @@
     margin-left: 1rem;
     color: #705601;
 }
+
+.ai-icon{
+    display: inline-block;
+    padding-right: 0.5rem;
+    vertical-align: middle;
+}
