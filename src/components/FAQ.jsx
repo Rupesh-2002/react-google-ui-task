@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import "./FAQ.css";
 import FAQQuestion from "./FAQQuestion.jsx";
 
@@ -35,6 +35,11 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
   return (
     <div className="faq-section">
       <div className="faq-title">Frequently Asked Questions</div>
@@ -45,7 +50,9 @@ const FAQ = () => {
               key={index}
               title={faq.title}
               number={index+1}
+              isActive={activeIndex === index}
               description={faq.description}
+              onClick={()=>handleToggle(index)}
             />
           );
         })}

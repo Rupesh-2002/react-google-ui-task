@@ -40,13 +40,13 @@
 }
 
 .accordion-item-progress-wrapper{
-    width: 5px;
+    /* width: 5px; */
     height: 100%;
     position: relative;
 }
 .accordion-item-progress-bar{
-    width: 100%; 
-    background-color: blue;
+    width: 5px; 
+    background-color: #1a73e8;
     position: absolute;
     inset: 0;
     z-index: 1;

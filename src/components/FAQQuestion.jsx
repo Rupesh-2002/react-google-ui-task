@@ -1,37 +1,31 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import gsap from "gsap";
 import { FaPlus } from "react-icons/fa6";
-const FAQQuestion = ({ title, description }) => {
-  const [showFAQDescription, setShowFAQDescription] = useState(false);
+import { useGSAP } from "@gsap/react";
+const FAQQuestion = ({ title, description, isActive, onClick }) => {
   const descriptionRef = useRef(null);
-
   const iconRef = useRef(null);
 
-  const handleClick = () => {
-    setShowFAQDescription((prev) => {
-      const isExpanded = !prev;
-
-      gsap.fromTo(
-        descriptionRef.current,
-        {
-          height: isExpanded ? 0 : "auto",
-          paddingBottom: isExpanded ? 0 : "2rem",
-        },
-        {
-          height: isExpanded ? "auto" : 0,
-          paddingBottom: isExpanded ? "2rem" : 0,
-          duration: 0.3,
-        }
-      );
-
-      iconRef.current.style.transform = isExpanded ? "rotate(45deg)" : "rotate(0deg)";
-
-      return isExpanded;
-    });
-  };
-
+  useGSAP(() => {
+    if (isActive) {
+      gsap.to(descriptionRef.current, {
+        height: descriptionRef.current.scrollHeight,
+        paddingBottom: "2rem",
+        duration: 0.3,
+      });
+      gsap.to(iconRef.current, { rotation: 45, duration: 0.3 });
+    } else {
+      gsap.to(descriptionRef.current, {
+        height: 0,
+        paddingBottom: 0,
+        duration: 0.3,
+      });
+      gsap.to(iconRef.current, { rotation: 0, duration: 0.3 });
+    }
+  }, [isActive]);
+  
   return (
-    <div onClick={handleClick} className="faq-question">
+    <div onClick={onClick} className="faq-question">
       <div className="faq-question-title">{title}</div>
       <div ref={descriptionRef} className="faq-question-description">
         {description}

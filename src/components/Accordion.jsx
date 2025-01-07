@@ -11,15 +11,15 @@ const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const intervalRef = useRef(null)
   const totalImages = images.length;
-//   useEffect(() => {
-//     intervalRef.current = setInterval(() => {
-//       setActiveIndex((prevIndex) => {
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setActiveIndex((prevIndex) => {
         
-//         console.log("Interval ID:", intervalRef.current, "Next Index:", (prevIndex + 1) % totalImages);
-//         return (prevIndex + 1) % totalImages;
-//       });
-//     }, 3000);
-//   }, []);
+        console.log("Interval ID:", intervalRef.current, "Next Index:", (prevIndex + 1) % totalImages);
+        return (prevIndex + 1) % totalImages;
+      });
+    }, 3000);
+  }, []);
   const clearAccordionInterval = ()=>{
     clearInterval(intervalRef.current)
     console.log(intervalRef.current)
@@ -45,7 +45,7 @@ const Accordion = () => {
         <AccordionItems
           setActiveIndex={setActiveIndex}
           activeIndex={activeIndex}
-        //   clearAccordionInterval={clearAccordionInterval}
+          clearAccordionInterval={clearAccordionInterval}
         />
       </div>
     </div>
